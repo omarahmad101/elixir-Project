@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('../css/clash-display.css');
+@import url(../css/clash-display.css);
 
 /* VARIABLES */
 :root {
@@ -20,7 +20,7 @@ body {
     color: var(--c-body);
 }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3,h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 600;
     color: var(--c-dark);
@@ -50,25 +50,48 @@ img {
     box-shadow: var(--box-shadow);
 }
 
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
 .navbar {
-    box-shadow: var(--box-shadow); /* Corrected from var(--c-body) */
+    box-shadow: var(--box-shadow);
 }
 
 .navbar-nav .nav-link {
-    font-weight: 500; /* Corrected from 500px */
+    font-weight: 500;
     color: var(--c-dark);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--c-dark);
+    color: var(--c-brand);
 }
 
+
+/* BTN */
 .btn {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
-    border-radius: 5px; /* Added px unit */
-    padding: 10px 20px;
+    border-radius: 0;
+    padding: 10px 24px;
 }
 
 .btn-brand {
@@ -81,4 +104,12 @@ img {
     background-color: var(--c-brand-light);
     border-color: var(--c-brand-light);
     color: white;
+}
+
+
+/* HERO */
+#hero {
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-1.jpg);
+    background-position: center;
+    background-size: cover;
 }
